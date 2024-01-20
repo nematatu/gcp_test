@@ -1,0 +1,21 @@
+version: '3'
+services:
+  backend:
+    build: backend/
+    volumes: 
+      - ./backend:/src
+    ports:
+      - 8000:8000
+    networks:
+      - net_test
+  frontend:
+    build: frontend/
+    volumes:
+      - ./frontend:/src
+    ports:
+      - 8080:8080
+    networks:
+      - net_test
+networks:
+  net_test:
+    external: true
