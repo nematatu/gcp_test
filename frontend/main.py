@@ -3,6 +3,6 @@ import requests
 
 st.title('Hello!')
 API_URL="https://gcp-test.onrender.com"
-res=requests.get("https://gcp-test.onrender.com/hello")
+res=requests.get("https://gcp-test.onrender.com/world")
 records=res.json()
 st.write(records)
